@@ -6,7 +6,21 @@ import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esb
 export default defineConfig({
   e2e: {
     specPattern: "cypress/e2e/**/*.feature", // Path to your feature files
+
     baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+
+    experimentalInteractiveRunEvents: true,
+    reporter: 'cypress-multi-reporters',
+    reporterOptions: {
+      reporterEnabled: 'mochawesome',
+      mochawesomeReporterOptions: {
+        reportDir: 'reports/mochaJson',
+        quite: true,
+        overwrite: false,
+        html: false,
+        json: true,}
+      },
+
 
     async setupNodeEvents(on, config) {
       // Add Cucumber preprocessor plugin
@@ -14,15 +28,18 @@ export default defineConfig({
 
       // Use Esbuild for preprocessing feature files
       on(
-          "file:preprocessor",
-          createBundler({
-            plugins: [createEsbuildPlugin(config)],
-          })
+        "file:preprocessor",
+        createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        })
       );
+
+
 
       // Return updated config
       return config;
     },
+
   },
 
 

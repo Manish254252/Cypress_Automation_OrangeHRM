@@ -3,18 +3,29 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "combine-reports": "mochawesome-merge reports/mochaJson/mochawesome*.json > reports/ReportJson/report.json",
+    "generate-report": "marge reports/ReportJson/report.json -f report -o reports/html --inline",
+    "postrun": "npm run combine-reports && npm run generate-report"
+    
+    
   },
   "keywords": [],
   "author": "Manish Solanki",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^13.17.0"
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4"
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress-multi-reporters": "^2.0.4",
+    "marge": "^1.0.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
