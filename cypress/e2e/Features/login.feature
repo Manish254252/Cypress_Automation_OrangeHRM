@@ -1,14 +1,14 @@
 @regression
-Feature: Orangehrmlive Login Page
+Feature: Orange HRM Live Login Page
 
-    Scenario: Login using valid credentails
+    Scenario: Login using valid credentials
         Given I access Login Portal Page
         When I enter a username Admin
         And I enter a password admin123
         And I click on the login button
         Then I should be redirected to Dashboard page
 
-    Scenario Outline: Login using invalid credentails
+    Scenario Outline: Login using invalid credentials
         Given I access Login Portal Page
         When I enter a username <username>
         And I enter a password <password>
