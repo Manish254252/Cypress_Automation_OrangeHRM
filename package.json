@@ -1,0 +1,23 @@
+{
+  "name": "cypress_automation_orangehrm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Manish Solanki",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.17.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/Steps/*.js"
+  }
+}
