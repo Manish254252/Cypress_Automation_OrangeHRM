@@ -5,8 +5,8 @@
     "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2025-01-10T11:54:33.697Z",
-    "end": "2025-01-10T11:54:33.697Z",
+    "start": "2025-01-10T11:59:02.994Z",
+    "end": "2025-01-10T11:59:02.994Z",
     "duration": 0,
     "testsRegistered": 0,
     "passPercent": null,
@@ -43,7 +43,7 @@
         "overwrite": false,
         "html": false,
         "screenshots": true,
-        "screenshshotsDir": "screenshots/",
+        "screenshshotsDir": "reports/screenshots",
         "json": true
       },
       "version": "6.2.0"

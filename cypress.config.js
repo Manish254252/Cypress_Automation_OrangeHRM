@@ -11,13 +11,18 @@ export default defineConfig({
 
     experimentalInteractiveRunEvents: true,
     reporter: 'cypress-multi-reporters',
+    screenshotOnRunFailure: true,
+    screenshotsFolder:"reports/html/screenshots",
+    trashAssetsBeforeRuns: true,
     reporterOptions: {
       reporterEnabled: 'mochawesome',
       mochawesomeReporterOptions: {
         reportDir: 'reports/mochaJson',
-        quite: true,
+        quite: false,
         overwrite: false,
         html: false,
+        screenshots: true,
+        screenshshotsDir: 'reports/screenshots',
         json: true,}
       },
 

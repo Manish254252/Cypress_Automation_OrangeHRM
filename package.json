@@ -4,11 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "combine-reports": "mochawesome-merge reports/mochaJson/mochawesome*.json > reports/ReportJson/report.json",
-    "generate-report": "marge reports/ReportJson/report.json -f report -o reports/html --inline",
-    "postrun": "npm run combine-reports && npm run generate-report"
-    
-    
+    "combine-reports": "mochawesome-merge reports/mochaJson/mochawesome*.json > reports/ReportJson/report.json|| echo 'No report files to merge.'",
+    "generate-report": "marge reports/ReportJson/report.json -f report -o reports/html --inline|| echo 'Failed to generate report.'",
+    "go": "npm run combine-reports && npm run generate-report"
   },
   "keywords": [],
   "author": "Manish Solanki",
@@ -19,16 +17,30 @@
     "cypress-mochawesome-reporter": "^3.8.2",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.2.0",
+    "papaparse": "^5.5.1"
   },
+
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
     "cypress-multi-reporters": "^2.0.4",
-    "marge": "^1.0.1"
+    "marge": "^1.0.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/e2e/Steps/*.js"
+  },
+
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "reports/mochaJson",
+      "quite": true,
+      "overwrite": true,
+      "html": true,
+      "screenshots": true,
+      "json": true}
   }
 }

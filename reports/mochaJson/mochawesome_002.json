@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2025-01-10T11:54:11.858Z",
-    "end": "2025-01-10T11:54:32.048Z",
-    "duration": 20190,
+    "start": "2025-01-10T11:56:27.188Z",
+    "end": "2025-01-10T11:56:48.738Z",
+    "duration": 21550,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8af9d8f4-a193-4cf1-8806-30ff0fa4f4c6",
+      "uuid": "073ce90b-f283-4eed-9b44-9d67bdac88f3",
       "title": "",
       "fullFile": "cypress\\e2e\\Features\\DataDriven.feature",
       "file": "cypress\\e2e\\Features\\DataDriven.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "732e30ec-66f1-4286-b6e8-d9df555dd19b",
+          "uuid": "abca907e-401c-4a8f-abc4-124677750996",
           "title": "Orange HRM Live Login Page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login using valid credentials with Data Driven",
               "fullTitle": "Orange HRM Live Login Page Login using valid credentials with Data Driven",
               "timedOut": null,
-              "duration": 20169,
+              "duration": 21509,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.oxd-alert`, but never found it.\n    at eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress\\e2e\\Features\\DataDriven.feature:18625:34)\nat Array.forEach (<anonymous>)\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress\\e2e\\Features\\DataDriven.feature:18620:16)",
                 "diff": null
               },
-              "uuid": "05288055-e357-4800-b1b8-8db39ef90b5b",
-              "parentUUID": "732e30ec-66f1-4286-b6e8-d9df555dd19b",
+              "uuid": "edfd8299-a48b-4b50-aa96-5a31a7124787",
+              "parentUUID": "abca907e-401c-4a8f-abc4-124677750996",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "05288055-e357-4800-b1b8-8db39ef90b5b"
+            "edfd8299-a48b-4b50-aa96-5a31a7124787"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 20169,
+          "duration": 21509,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
